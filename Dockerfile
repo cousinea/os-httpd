@@ -59,8 +59,6 @@ RUN buildDeps=' \
 		' /usr/local/apache2/conf/httpd.conf \
 	&& apt-get purge -y --auto-remove $buildDeps
 
-CMD ["ls -l httpd-foreground"]
-
 COPY httpd-foreground /usr/local/bin/
 
 EXPOSE 80
